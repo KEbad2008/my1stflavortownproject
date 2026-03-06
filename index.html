@@ -1,46 +1,51 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>number guessing game by ebad</title>
+        <title>Number Guessing Game by Ebad</title>
     </head>
     
     <body style="background-color: lightblue;">
-        <
-        <h1>this is number guessing game, guess number</h1>
-        <p> please guess a number from 1 and 20</p>
-        <h2>enjoy!</h2>
-        <input type="number" id="guess" placeholder="enter your number">
-        <button onclick="checkGuess()">Guess Here by clickung me</button>
-        <p id="result"></p>
-        <p> if you are interested, please consider playing again!</p>
-        <script> 
-            const numberToGuess = Math.floor(Math.random() * 10) +1;
-            const result = document.getElementById('result');
-        {
-            if (!userguess) {
-                result.textContent = "enter numer pls!";
-                return;
-            }
-            if (userGuess === numberToGuess) {
-                result.textContext = "u got it!";
-            } else if (userGuess < numberToGuess) {
-                result.textContent = "wrong. too low. retry";
+        <h1>This is the Number Guessing Game, guess the number!</h1>
+        <p>Please guess a number between 1 and 20.</p>
+        <h2>Enjoy!</h2>
 
-            } else {
-                result.textContent = "too high try again.";
-            
+        <input type="number" id="guess" placeholder="Enter your number">
+        <button onclick="checkGuess()">Guess Here by Clicking Me</button>
+        <p id="result"></p>
+        <p>If you are interested, please consider playing again!</p>
+
+        <script> 
+            // Random number between 1 and 20
+            const numberToGuess = Math.floor(Math.random() * 20) + 1;
+            const result = document.getElementById('result');
+
+            function checkGuess() {
+                // Get the user's guess
+                const userGuess = Number(document.getElementById('guess').value);
+
+                // Check if the input is valid
+                if (!userGuess) {
+                    result.textContent = "Please enter a number!";
+                    return;
+                }
+
+                // Check the guess
+                if (userGuess === numberToGuess) {
+                    result.textContent = "You got it! ";
+                } else if (userGuess < numberToGuess) {
+                    result.textContent = "Wrong. Too low. Try again.";
+                } else {
+                    result.textContent = "Too high. Try again.";
+                }
             }
-        }
-        
         </script>
-        
-        <p>thank you for using the game! if you liked this game please consider sharing it</p>
-        <p>if you want to see my next game, please email me and i will keep players updated</p>
-        <p> enjoy. next game will be a drawing board . you can draw and download your stuff maybe!</p>
-        <p>CHANGELOG</p>
-        <p>- this is the newest changelog . all updates to the game will be shwon here.</p>
-        <br>
-            
+
+        <p>Thank you for using the game! If you liked this game, please consider sharing it.</p>
+        <p>If you want to see my next game, please email me, and I will keep players updated.</p>
+        <p>Enjoy. The next game will be a drawing board where you can draw and download your creations!</p>
+
+        <p><strong>CHANGELOG</strong></p>
+        <p>- This is the newest changelog. All updates to the game will be shown here.</p>
         <br>
     </body>
 </html>
