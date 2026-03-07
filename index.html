@@ -1,7 +1,18 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <title>number guessing game by ebad</title>
+    </head>
     <body>
-        <p>The Number Guessing Game!</p>
+        <h1>this is number guessing game, guess number</h1>
+        <p> please guess a number from 1 and 20</p>
+        <input type="number" id="guess" placeholder="enter your number">
+        <button onclick="checkGuess()">Guess Here by clickung me</button>
+        <p id="result"></p>
 
+        <script> 
+            const numberToGuess = Math.floor(Math.random() * 10) +1;
+            
+        </script>
     </body>
 </html>
