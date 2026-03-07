@@ -12,7 +12,23 @@
 
         <script> 
             const numberToGuess = Math.floor(Math.random() * 10) +1;
-            
+            const result = document.getElementById('result');
+        {
+            if (!userguess) {
+                result.textContent = "enter numer pls!";
+                return;
+            }
+            if (userGuess === numberToGuess) {
+                result.textContext = "u got it!";
+            } else if (userGuess < numberToGuess) {
+                result.textContent = "wrong. too low. retry";
+
+            } else {
+                result.textContent = "too high try again.";
+
+            }
+        }
+        
         </script>
     </body>
 </html>
